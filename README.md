@@ -3,7 +3,10 @@
 
 ## How does it work?
 
-The extension is comprised of two parts: 1. The actual chrome extension, which is run from the browser, and overrides the default new tab page, and 2. The python flask application that runs in the background, accepting commands from the tab as an API.
+The extension is comprised of two parts:
+
+1. The actual chrome extension, which is run from the browser, and overrides the default new tab page.
+2. The python flask application that runs in the background, accepting commands from the tab as an API.
 
 This approach allows arbitrary operating system commands to be run from the browser, where normally this would be strictly off limits, and is still safe, within the context of the local user.
 
