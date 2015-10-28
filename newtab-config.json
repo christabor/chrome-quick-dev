@@ -1,0 +1,12 @@
+{
+    "js": {
+        "url": "http://localhost:8080",
+        "api_url": "http://localhost:5000/",
+        "projects": {
+            "jquery-plugin": "New jquery plugin",
+            "d3js-plugin": "New d3.js plugin",
+            "babel": "ES6 code (via Babel)"
+        }
+    },
+    "flask": {}
+}

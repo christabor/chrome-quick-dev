@@ -1,0 +1,39 @@
+{
+  "name": "chrome-quick-dev",
+  "version": "1.0",
+  "manifest_version": 2,
+  "author": "Chris Tabor",
+  "homepage_url": "http://github.com/christabor/chrome-quick-dev",
+  "offline_enabled": true,
+  "description": "New tab options for quick development access for random ideas and projects.",
+  "web_accessible_resources": [
+    "js/vendor/*",
+    "js/*",
+    "css/vendor/*",
+    "css/themes/*",
+    "css/*",
+    "panel.html",
+    "images/*.png"
+  ],
+  "chrome_url_overrides": {
+    "newtab": "override.html"
+  },
+  "content_scripts": [{
+    "js": [
+      "js/vendor/jquery.min.js",
+      "js/vendor/jquery-ui.min.js"
+    ],
+    "css": [],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "permissions": [
+    "http://*/*",
+    "https://*/*",
+    "chrome://favicon/",
+    "tabs",
+    "history",
+    "storage",
+    "activeTab",
+    "bookmarks"
+  ]
+}

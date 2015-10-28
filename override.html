@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chrome Quick Dev</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Exo:400,700,700italic,400italic|Cardo:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/vendor/darkly-bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.css">
+    <style>
+        body {
+            background: #444 url(images/bg-cartographer.png);
+        }
+        iframe {
+            border: 2px solid #ccc;
+            width: 100%;
+            height: 100%;
+            min-height: 800px;
+        }
+        .heading {
+            margin: 0 0 1em 0;
+            padding: 2em;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            margin-bottom: 2em;
+        }
+        ul li {
+            line-height: 2.4em;
+        }
+        ul li a {
+            -webkit-transition: all .25s ease-in-out;
+            -moz-transition: all .25s ease-in-out;
+            -ms-transition: all .25s ease-in-out;
+            -o-transition: all .25s ease-in-out;
+            transition: all .25s ease-in-out;
+            display: inline-block;
+            padding: 0em 0.4em;
+        }
+        ul li a:hover {
+            background-color: black;
+            border-radius: 4px;
+            color: #FFE681;
+            padding: 0 0.8em;
+        }
+        h4 {
+            font-size: 30px;
+            font-weight: 100;
+        }
+        .footer {
+            font-weight: 200;
+            padding-top: 2em;
+            opacity: 0.2;
+            font-size: 10px;
+        }
+        #loading {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            font-weight: 100;
+            padding: 2em;
+            font-size: 60px;
+            z-index:999;
+        }
+        #loading.in {
+            display: block;
+        }
+        #recent {
+            font-size: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">Loading... <span class="fa fa-loading"></span></div>
+    <div class="heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Quick Dev <small class="pull-right">because, why not?</small></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>New locally</h4>
+                <ul class="list-unstyled" id="templates"></ul>
+                <h4>New remotely</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://jsbin.com/?html,js,output">JSBin</a>
+                    </li>
+                    <li>
+                        <a href="http://codepen.io/pen/">CodePen</a>
+                    </li>
+                    <li>
+                        <a href="https://jsfiddle.net/">JSFiddle</a>
+                    </li>
+                    <li>
+                        <a href="http://dabblet.com/">Dabblet</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h4>Other resources</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="http://bootstrapcdn.com/">bootstrapcdn</a>
+                    </li>
+                    <li>
+                        <a href="http://cdnjs.com/">cdnjs</a>
+                    </li>
+                    <li>
+                        <a href="https://cdnjs.com/libraries/font-awesome">Font Awesome</a>
+                    </li>
+                </ul>
+                <h4>Recently created...</h4>
+                <ul class="list-unstyled" id="recent">
+                    <li>None...</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row footer text-center">
+            <div class="col-md-12">
+                <p>&copy; Copyright 2015 Chris Tabor</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>
