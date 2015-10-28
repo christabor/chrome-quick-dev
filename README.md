@@ -14,7 +14,7 @@ Things like creating, removing and opening folders and files is now possible, vi
 
 ## Getting started
 
-### Setup chrome extension
+### Setting up chrome extension
 1. Go to `chrome:extensions` in your browser.
 2. Pick "load unpacked extension"
 3. Choose the quick-dev folder.
