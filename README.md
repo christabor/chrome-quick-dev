@@ -25,5 +25,9 @@ Things like creating, removing and opening folders and files is now possible, vi
 ## Configuration
 Use the `newtab-config.json` to configure options for both the flask and javascript scripts. See the file for examples of what can be configured.
 
+### Customizing generate file folder.
+
+By default, the flask application chooses to store generated projects two directories above, which is outside the git project. This can be configured to be a different relative path, or an absolute one. Just change the constant `DEFAULT_PATH` in `flask-app.py`
+
 ## Current application templates
-Customize all the templates you want by adding more project folders **in the flask app**, under `{quick-dev-path}/app/templates/projects/`. Currently, all links in `override.html` must match up with the folder name in the projects directory (e.g. '#jquery-plugin').
+Customize all the templates you want by adding more project folders **in the flask app**, under `{quick-dev-path}/app/templates/projects/`. Currently, all links in `override.html` must match up with the folder name in the projects directory (e.g. '#jquery-plugin' link href must have a matching jquery-plugin folder).
