@@ -14,6 +14,10 @@ Things like creating, removing and opening folders and files is now possible, vi
 
 ## Getting started
 
+### Requirements
+python 2.7+
+flask
+
 ### Setting up chrome extension
 1. Go to `chrome:extensions` in your browser.
 2. Pick "load unpacked extension"

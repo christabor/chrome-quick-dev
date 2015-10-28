@@ -22,8 +22,8 @@ function loadRecent() {
 }
 
 function startProjectEdit(project) {
-    window.open('http://localhost:8080/' + project);
-    if(confirm('New github repo?')) window.open('https://github.com/new');
+    window.open(config.url + project);
+    if(confirm('New github repo?') && config.prompt_git) window.open('https://github.com/new');
     // Setup history
     chrome.storage.local.get('all-projects', function(data) {
         var d = data['all-projects'];
