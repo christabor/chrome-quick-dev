@@ -12,6 +12,7 @@ app.debug = True
 
 # Generated content here.
 DEFAULT_PATH = '../../GENERATED/'
+EDITOR = 'sublime'
 
 
 @app.route('/')
@@ -23,7 +24,7 @@ def index():
 
 @app.route('/open/<folder>/', methods=['GET'])
 def open_folder(folder):
-    os.system('sublime {}{}/'.format(DEFAULT_PATH, folder))
+    os.system('{} {}{}/'.format(EDITOR, DEFAULT_PATH, folder))
     return json.dumps({
         'success': True,
         'status': 200,
@@ -56,12 +57,7 @@ def make_folder(make_type):
 
     if 'serve' in request.form:
         # Open for editing
-        os.system('sublime {}'.format(path))
-        # Serve the file immediately
-        # os.system('cd {}'.format(path))
-        # os.system('python -m SimpleHTTPServer 8002')
-        # os.system('http-serve 8080')  # open node server on 8080
-
+        os.system('{} {}'.format(EDITOR, path))
     return json.dumps({
         'success': True,
         'status': 200,
