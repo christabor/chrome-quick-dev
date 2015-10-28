@@ -1,4 +1,5 @@
-# chrome-quick-dev - a replacement tab for chrome to help make getting new projects up and running FAST
+# chrome-quick-dev
+**a replacement tab for chrome to help make getting new projects up and running FAST**
 
 ## How does it work?
 
