@@ -67,15 +67,35 @@
             font-size: 60px;
             z-index:999;
         }
-        #loading.in {
-            display: block;
-        }
         #recent {
             font-size: 90%;
+        }
+        .banner {
+            text-align: center;
+            color: white;
+            display: none;
+            font-size: 13px;
+            height: 40px;
+            line-height: 40px;
+        }
+        #error {
+            background-color: #B30003;
+        }
+        #success {
+            background-color: #34A22E;
+        }
+        .in {
+            display: block;
         }
     </style>
 </head>
 <body>
+    <div id="success" class="banner">
+        <p><strong>Connection good</strong> - flask server is up and running!</p>
+    </div>
+    <div id="error" class="banner">
+        <p><strong>Connection error</strong> - flask server is not running or has crashed.</p>
+    </div>
     <div id="loading">Loading... <span class="fa fa-loading"></span></div>
     <div class="heading">
         <div class="container">

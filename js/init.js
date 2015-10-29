@@ -21,6 +21,20 @@ function loadRecent() {
     });
 }
 
+function heartbeatCheck() {
+    $.ajax({
+        url: API_ROOT,
+        success: function(){
+            $('#success').addClass('in');
+            $('#error').removeClass('in');
+        },
+        error: function(){
+            $('#error').addClass('in');
+            $('#success').removeClass('in');
+        }
+    });
+}
+
 function startProjectEdit(project) {
     window.open(config.url + project);
     if(confirm('New github repo?') && config.prompt_git) window.open('https://github.com/new');
@@ -83,6 +97,8 @@ function init() {
             makeProject(name);
         });
         loadRecent();
+        setInterval(heartbeatCheck, 5000);
+        heartbeatCheck();
     });
 }
 
