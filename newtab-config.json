@@ -9,5 +9,8 @@
         },
         "prompt_git": false
     },
-    "flask": {}
+    "flask": {
+        "editor": "sublime",
+        "default_path": "/Users/chris/Dropbox/GENERATED/"
+    }
 }

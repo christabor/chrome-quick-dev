@@ -9,10 +9,11 @@ import hashlib
 
 app = Flask(__name__)
 app.debug = True
+config = None
 
-# Generated content here.
-DEFAULT_PATH = '../../GENERATED/'
-EDITOR = 'sublime'
+# Use config file
+with open('../newtab-config.json', 'r') as json_config:
+    config = dict(json.loads(json_config.read()))['flask']
 
 
 @app.route('/')
@@ -24,7 +25,8 @@ def index():
 
 @app.route('/open/<folder>/', methods=['GET'])
 def open_folder(folder):
-    os.system('{} {}{}/'.format(EDITOR, DEFAULT_PATH, folder))
+    os.system('{} {}{}/'.format(
+        config['editor'], config['default_path'], folder))
     return json.dumps({
         'success': True,
         'status': 200,
@@ -48,7 +50,7 @@ def make_folder(make_type):
         name = request.form['name']
     else:
         name = '{}{}'.format(make_type, hash)
-    path = '{}{}'.format(DEFAULT_PATH, name)
+    path = '{}{}'.format(config['default_path'], name)
 
     # Make type is specifiy in request: e.g. 'jquery-plugin', 'd3js-plugin...'
     os.system('mkdir {}'.format(path))
@@ -57,7 +59,7 @@ def make_folder(make_type):
 
     if 'serve' in request.form:
         # Open for editing
-        os.system('{} {}'.format(EDITOR, path))
+        os.system('{} {}'.format(config['editor'], path))
     return json.dumps({
         'success': True,
         'status': 200,
