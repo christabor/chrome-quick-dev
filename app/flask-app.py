@@ -23,6 +23,15 @@ def index():
     return render_template('dashboard.html', files=files)
 
 
+@app.route('/heartbeat/', methods=['GET'])
+def heartbeat():
+    return json.dumps({
+        'success': True,
+        'status': 200,
+        'message': 'Flask server operating successfully'
+    })
+
+
 @app.route('/open/<folder>/', methods=['GET'])
 def open_folder(folder):
     os.system('{} {}{}/'.format(

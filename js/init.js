@@ -23,7 +23,7 @@ function loadRecent() {
 
 function heartbeatCheck() {
     $.ajax({
-        url: API_ROOT,
+        url: API_ROOT + 'heartbeat/',
         success: function(){
             $('#success').addClass('in');
             $('#error').removeClass('in');
