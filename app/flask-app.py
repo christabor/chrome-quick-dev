@@ -13,7 +13,7 @@ config = None
 
 # Use config file
 with open('../newtab-config.json', 'r') as json_config:
-    config = dict(json.loads(json_config.read()))['flask']
+    config = dict(json.loads(json_config.read()))
 
 
 @app.route('/')

@@ -36,7 +36,7 @@ function heartbeatCheck() {
 }
 
 function startProjectEdit(project) {
-    window.open(config.url + project);
+    window.open(config.url + ':' + config.port + '/' + project);
     if(confirm('New github repo?') && config.prompt_git) window.open('https://github.com/new');
     // Setup history
     chrome.storage.local.get('all-projects', function(data) {
@@ -85,8 +85,8 @@ function loadProjects(projects) {
 
 function init() {
     $.getJSON('newtab-config.json', function(data){
-        config = data.js;
-        API_ROOT = config.api_url;
+        config = data;
+        API_ROOT = config.api_url + ':' + config.api_port + '/';
         loadProjects(config.projects);
         $('a').attr('target', '_blank');
         $('#templates').find('li > a').on('click', function(e){

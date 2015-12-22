@@ -1,16 +1,14 @@
 {
-    "js": {
-        "url": "http://localhost:8080/",
-        "api_url": "http://localhost:5000/",
-        "projects": {
-            "jquery-plugin": "New jquery plugin",
-            "d3js-plugin": "New d3.js plugin",
-            "babel": "ES6 code (via Babel)"
-        },
-        "prompt_git": false
+    "url": "http://localhost",
+    "port": 8081,
+    "api_url": "http://localhost",
+    "api_port": 5000,
+    "projects": {
+        "jquery-plugin": "New jquery plugin",
+        "d3js-plugin": "New d3.js plugin",
+        "babel": "ES6 code (via Babel)"
     },
-    "flask": {
-        "editor": "sublime",
-        "default_path": "/Users/chris/Dropbox/GENERATED/"
-    }
+    "prompt_git": false,
+    "editor": "sublime",
+    "default_path": "/Users/chris/Dropbox/GENERATED/"
 }
