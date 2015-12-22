@@ -61,7 +61,7 @@ def make_folder(make_type):
         name = '{}{}'.format(make_type, hash)
     path = '{}{}'.format(config['default_path'], name)
 
-    # Make type is specifiy in request: e.g. 'jquery-plugin', 'd3js-plugin...'
+    # Make type is specified in request: e.g. 'jquery-plugin', 'd3js-plugin...'
     os.system('mkdir {}'.format(path))
     # Copy project dir
     os.system('cp -r templates/projects/{}/* {}'.format(make_type, path))
